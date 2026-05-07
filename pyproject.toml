@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automation-task-script"
+version = "1.0.0"
+description = "Python automation utility to organize files in overloaded directories."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Juan Pelaez" }
+]
+keywords = ["automation", "python", "files", "organization", "devops"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+automation-task-script = "automation_task_script.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
